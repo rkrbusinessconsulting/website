@@ -731,5 +731,141 @@ header p {
     border-top: 1px solid #eee;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+
+    /* Disable scroll snap on mobile */
+    html, body {
+      scroll-snap-type: none !important;
+      overflow-y: auto;
+    }
+  
+    header, section {
+      scroll-snap-align: none !important;
+      scroll-snap-stop: unset !important;
+    }
+  
+    /* HEADER ADJUSTMENTS */
+    header h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+  
+    header p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+  
+    .cta-button {
+      padding: 14px 28px;
+      font-size: 1rem;
+    }
+  
+    /* NAVIGATION FOR MOBILE */
+    nav {
+      justify-content: space-between;
+      padding: 16px 20px;
+    }
+  
+    .logo {
+      position: relative;
+      left: 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+  
+    /* SERVICES SECTION / FEATURES */
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 0 10px;
+    }
+  
+    .feature-card {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      max-height: none;
+    }
+  
+    .feature-card img {
+      max-height: 200px;
+    }
+  
+    .feature-title {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    /* ABOUT SECTION STACKING */
+    .about-container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about-text h2 {
+      font-size: 2.2rem;
+    }
+  
+    .about-text p {
+      font-size: 1.05rem;
+      padding: 0 10px;
+    }
+  
+    .about-image img {
+      max-width: 280px;
+    }
+  
+    /* CONTACT SECTION */
+    .contact-wrapper {
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 10px;
+    }
+  
+    .contact-card,
+    .contact-left {
+      text-align: center;
+    }
+
+    .socials.contact-socials {
+      display:flex;
+      justify-content: center;
+    }
+
+    .consult-button {
+      display: none;
+      display: hidden;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+  }
+  
   
   
