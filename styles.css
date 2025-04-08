@@ -732,6 +732,13 @@ header p {
     width: 100%;
   }
 
+  @media (max-width: 900px) {
+    .consult-button {
+      display: none;
+      display: hidden;
+    }
+  }
+
   @media (max-width: 768px) {
 
     /* Disable scroll snap on mobile */
@@ -866,6 +873,74 @@ header p {
       height: 40px;
     }
   }
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  
+  top: 24px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -7.5px);
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    display: none;
+    margin-top:0px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .consult-button {
+    right: 20px;
+    top: 24px;
+  }
+}
+
+
   
   
   
