@@ -1,0 +1,260 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Business consulting for growth, partnerships, and marketing success with Rachelle Khoury." />
+<title>RKR Business Consulting</title>
+<link rel="icon" type="image/png" href="assets/favi.png">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeObserverOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -10% 0px"
+    };
+
+    // For fade-in sections
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, fadeObserverOptions);
+
+    document.querySelectorAll('.fade-left, .fade-right, .fade-up').forEach(el => {
+      fadeObserver.observe(el);
+    });
+
+    // For staggered feature cards
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = document.querySelectorAll('.feature-card');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('visible');
+            }, index * 250);
+          });
+        } else {
+          document.querySelectorAll('.feature-card').forEach(card => {
+            card.classList.remove('visible');
+          });
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const featureSection = document.querySelector('#features');
+    if (featureSection) {
+      staggerObserver.observe(featureSection);
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/assets/rkrlogo.png" alt="RKR Consulting Logo" />
+    </div>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#features">Services</a>
+      <a href="#vision">Mission</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+      <a href="#contact" class="consult-button">Free Consultation</a>
+  </nav>
+
+  <div class="scroll-container">
+  <header class="snap-section reveal visible" class="snap-section">
+    <div class="puzzle p1">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+          </svg>
+    </div>
+    <div class="puzzle p2">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+          </svg>
+    </div>
+    <div class="puzzle p3">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+          </svg>
+    </div>
+    <div class="puzzle p4">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+          </svg>
+    </div>
+    <div class="puzzle p5">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+          </svg>
+    </div>
+<!-- <div class="puzzle p6">
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+    </svg>
+  </div>
+  
+  <div class="puzzle p7">
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+    </svg>
+  </div>
+  
+  <div class="puzzle p8">
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M208 0c-19.9 0-36 16.1-36 36 0 11.6 5.6 21.9 14.2 28.4-6.7 12-14.8 23.6-24.2 34.6H96v96c19.9 0 36 16.1 36 36s-16.1 36-36 36v96h96c0-19.9 16.1-36 36-36s36 16.1 36 36 16.1 36 36 36h96v-96c-19.9 0-36-16.1-36-36s16.1-36 36-36V96h-96c0 19.9-16.1 36-36 36s-36-16.1-36-36 16.1-36 36-36V0h-96z"/>
+    </svg>
+  </div>-->
+  
+  <h1 class="">RKR Business Consulting</h1>
+  <p class="">With us you get all the Puzzle Pieces in one box.</p>
+  <a href="#contact" class="cta-button">Work With Us</a>
+  <div class="socials">
+      <a href="https://www.instagram.com/rkrbusinessconsulting/#" target="_blank" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.75 2h8.5C20.55 2 22 3.46 22 7.75v8.5C22 20.55 20.54 22 16.25 22h-8.5C3.45 22 2 20.54 2 16.25v-8.5C2 3.45 3.46 2 7.75 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM18.5 6a1 1 0 100 2 1 1 0 000-2z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/rachelle-khoury-0921ba280/" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341.6a53.55 53.55 0 1 1 53.56-53.55 53.6 53.6 0 0 1-53.56 53.55zm384 341.6h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.3 0-55.7 37.7-55.7 76.6V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94.2 0 111.5 62 111.5 142.3V448z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text fade-left">
+        <h2>Hi there, I'm Rachelle</h2>
+        <p>
+          I’m Rachelle, a bilingual Dominican business consultant and the founder of RKR Business Consulting LLC. With years of experience and a proven track record, I am passionate about helping businesses grow and strengthen their brand.
+        </p>
+        <p>
+          I specialize in event representation, networking, partnership development, business proposals, client onboarding, and sales team training. I also conduct market research to provide data-driven insights for strategic growth!
+        </p>
+
+      </div>
+      <div class="about-image fade-right">
+        <img src="/assets/headshot.jpg" alt="Rachelle Khoury">
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Services</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="/assets/3.png" alt="Lead Generation">
+        <div class="feature-title">Lead Generation & Partnership Development</div>
+      </div>
+      <div class="feature-card">
+        <img src="/assets/1.png" alt="Business Proposals">
+        <div class="feature-title">Custom Business Proposals, Advisory Reports & Market Research</div>
+      </div>
+      <div class="feature-card">
+        <img src="/assets/4.png" alt="Event Planning">
+        <div class="feature-title">Event Planning, Coordination & Representation</div>
+      </div>
+      <div class="feature-card">
+        <img src="/assets/2.png" alt="Ad Design">
+        <div class="feature-title">Creative Ad Design & Marketing Materials</div>
+      </div>
+      <div class="feature-card">
+        <img src="/assets/6.png" alt="Social Media">
+        <div class="feature-title">Social Media Strategy & Support</div>
+      </div>
+      <div class="feature-card">
+        <img src="/assets/5.png" alt="Team Training">
+        <div class="feature-title">Team Performance Enhancement Training</div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="vision">
+    <div class="vision-bg-center"></div>
+    <div class="vision-container">
+      <h2>Our Mission</h2>
+      <p>
+        At RKR Business Consulting, we are passionate about empowering businesses to thrive in today's competitive landscape.
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        Our mission is to provide expert guidance and hands-on support to help businesses thrive. Let us partener with you on your journey to success and take your business to the next level!
+      </p>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="contact-section">
+    <div class="contact-wrapper">
+      <div class="contact-left fade-left">
+        <p id="tagtitle">Let's Connect</h2>
+        <p id="tagline">Ready to grow your business with clarity and strategy?</p>
+        <p><strong>Rachelle Khoury</strong><br>Founder & Business Consultant</p>
+        <p><strong>Phone:</strong> <a style="text-decoration: none;" href="tel:4078498985">(407) 849-8985</a></p>
+        <p><strong>Email:</strong> <a style="text-decoration: none;" href="mailto:rachelle@rkrbusinessconsulting.com">rachelle@rkrbusinessconsulting.com</a></p>
+        <div class="socials contact-socials">
+          <a href="https://www.instagram.com/rkrbusinessconsulting/#" target="_blank" aria-label="Instagram">
+            <!-- IG SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.75 2h8.5C20.55 2 22 3.46 22 7.75v8.5C22 20.55 20.54 22 16.25 22h-8.5C3.45 22 2 20.54 2 16.25v-8.5C2 3.45 3.46 2 7.75 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM18.5 6a1 1 0 100 2 1 1 0 000-2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/rachelle-khoury-0921ba280/" target="_blank" aria-label="LinkedIn">
+            <!-- LinkedIn SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+              <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341.6a53.55 53.55 0 1 1 53.56-53.55 53.6 53.6 0 0 1-53.56 53.55zm384 341.6h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.3 0-55.7 37.7-55.7 76.6V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94.2 0 111.5 62 111.5 142.3V448z"/>
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+
+  
+      <div class="contact-card fade-right">
+        <h3>Have a project in mind?</h3>
+        <p>Let’s talk and see how we can make it happen together.</p>
+        <a href="mailto:rachelle@rkrbusinessconsulting.com" class="email-button">Email Us</a>
+      </div>
+    </div>
+  
+    <footer>
+      © 2025 RKR Business Consulting. All rights reserved.
+    </footer>
+  </section>
+  
+  
+  
+  
+  
+</body>
+</html>
+
+
