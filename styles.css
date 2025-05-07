@@ -938,6 +938,19 @@ header p {
     right: 20px;
     top: 24px;
   }
+
+  header h1,
+  header p,
+  .cta-button,
+  .socials,
+  .fade-left,
+  .fade-right,
+  .feature-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 
