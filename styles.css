@@ -775,7 +775,7 @@ header p {
   }
 
   .wpcc-logo {
-    height: 200px;
+    height: 180px;
     width: auto;
   }
 
@@ -877,7 +877,7 @@ header p {
     }
   
     .feature-card img {
-      max-height: 200px;
+      max-height: 180px;
     }
   
     .feature-title {
