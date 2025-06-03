@@ -254,44 +254,107 @@ Let us partner with you on your journey to success and take your business to the
   <section id="contact" class="contact-section">
     <div class="contact-wrapper">
       <div class="contact-left fade-left">
-        <p id="tagtitle">Let's Connect</h2>
+        <h2 id="tagtitle">Let's Connect</h2>
         <p id="tagline">Ready to grow your business with clarity and strategy?</p>
-        <p><strong>Rachelle Khoury</strong><br>Founder & Business Consultant</p>
-        <p><strong>Phone:</strong> <a style="text-decoration: none;" href="tel:4078498985">(407) 849-8985</a></p>
-        <p><strong>Email:</strong> <a style="text-decoration: none;" href="mailto:rachelle@rkrbusinessconsulting.com">rachelle@rkrbusinessconsulting.com</a></p>
+        <div class="contact-info">
+          <p><strong>Rachelle Khoury</strong><br>Founder & Business Consultant</p>
+          <p><strong>Phone:</strong> <a href="tel:4078498985">(407) 849-8985</a></p>
+          <p><strong>Email:</strong> <a href="mailto:rachelle@rkrbusinessconsulting.com">rachelle@rkrbusinessconsulting.com</a></p>
+        </div>
         <div class="socials contact-socials">
           <a href="https://www.instagram.com/rkrbusinessconsulting/#" target="_blank" aria-label="Instagram">
-            <!-- IG SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
               <path d="M7.75 2h8.5C20.55 2 22 3.46 22 7.75v8.5C22 20.55 20.54 22 16.25 22h-8.5C3.45 22 2 20.54 2 16.25v-8.5C2 3.45 3.46 2 7.75 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM18.5 6a1 1 0 100 2 1 1 0 000-2z"/>
             </svg>
           </a>
           <a href="https://www.linkedin.com/in/rachelle-khoury-0921ba280/" target="_blank" aria-label="LinkedIn">
-            <!-- LinkedIn SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
               <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341.6a53.55 53.55 0 1 1 53.56-53.55 53.6 53.6 0 0 1-53.56 53.55zm384 341.6h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.3 0-55.7 37.7-55.7 76.6V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94.2 0 111.5 62 111.5 142.3V448z"/>
             </svg>
           </a>
         </div>
-        
       </div>
 
-  
-      <div class="contact-card fade-right">
-        <h3>Have a project in mind?</h3>
-        <p>Let's talk and see how we can make it happen together.</p>
-        <a href="mailto:rachelle@rkrbusinessconsulting.com" class="email-button">Email Us</a>
+      <div class="contact-right fade-right">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="First name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last name"
+                required
+              />
+            </div>
+            <div class="form-group full-width">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+            <div class="form-group full-width">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+1 (555) 000-0000"
+              />
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Leave us a message..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   
     <footer>
       <div class="footer-content">
         <div class="footer-main">
-          <p>Built by <a href="https://www.wrevux.com" target="_blank">Wrevux</a></p>
+          <p style="margin-bottom: 0px;">Built by <a href="https://www.wrevux.com" target="_blank">Wrevux</a></p>
           <p>© 2025 RKR Business Consulting. All rights reserved.</p>
         </div>
         <div class="footer-wpcc">
-          <p>Proud Member of</p>
+          <p style="margin-bottom: 5px;">Proud Member of</p>
           <img src="/assets/wpcc.png" alt="WPCC Member" class="wpcc-logo">
         </div>
       </div>

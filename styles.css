@@ -212,7 +212,6 @@ header p {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
   margin-top: 10px;
   animation-delay: 1.2s;
 }
@@ -628,7 +627,7 @@ header p {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding: 60px 40px;
+    padding-top: 150px;
     background: var(--bg);
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -637,7 +636,7 @@ header p {
   .contact-wrapper {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 100px;
     width: 100%;
@@ -647,88 +646,156 @@ header p {
   
   .contact-left {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  
+  .contact-info {
+    margin: 30px 0;
+  }
+  
+  .contact-info p {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: var(--gold);
   }
   
   #tagtitle {
     font-size: 3.5rem;
     font-weight: 800;
-    color: black;
+    color: var(--text);
+    margin-bottom: 20px;
   }
   
-  .contact-left p {
-    font-size: 1.2rem;
-    margin-bottom: 16px;
-    color: var(--muted);
-    max-width: 1000px;
-    color: black;
-  }
-
   #tagline {
-    font-size: 1.5rem !important;
-    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: var(--muted);
+    margin-bottom: 30px;
   }
   
-  .contact-left a {
-    color: var(--text);
-    text-decoration: underline;
-  }
-
-  .contact-left {
+  .contact-right {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
+    max-width: 600px;
   }
   
-  .contact-left p {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: var(--text);
-  }
-  
-  /* 👇 Override for the contact section only */
-.contact-socials {
-  justify-content: flex-start;
-}
-  
-  
-  .contact-card {
-    flex: 1;
-    min-width: 280px;
+  .contact-form {
+    width: 100%;
+    padding: 40px;
     background: #fff;
     border-radius: 16px;
-    padding: 40px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-    text-align: center;
   }
   
-  .contact-card h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 16px;
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
   }
   
-  .contact-card p {
-    font-size: 1.2rem;
-    color: var(--muted);
-    margin-bottom: 36px;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   
-  .email-button {
-    display: inline-block;
-    padding: 14px 32px;
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 14px 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    color: var(--text);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(233, 191, 66, 0.1);
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #999;
+  }
+  
+  .form-group textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 16px 32px;
     background-color: var(--gold);
     color: var(--text);
     font-weight: bold;
     text-decoration: none;
+    border: none;
     border-radius: 50px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
   }
   
-  .email-button:hover {
+  .submit-button:hover {
     background-color: #d3a920;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
   }
+  
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      gap: 40px;
+    }
+  
+    .contact-left,
+    .contact-right {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  
+    #tagtitle {
+      font-size: 2.5rem;
+    }
+  
+    #tagline {
+      font-size: 1.2rem;
+    }
+  
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .contact-form {
+      padding: 30px 20px;
+    }
+  }
+  
   
   
   footer {
@@ -754,14 +821,13 @@ header p {
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .footer-wpcc {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   .footer-content a {
@@ -775,7 +841,7 @@ header p {
   }
 
   .wpcc-logo {
-    height: 180px;
+    height: 150px;
     width: auto;
   }
 
@@ -918,7 +984,6 @@ header p {
 
     .socials.contact-socials {
       display:flex;
-      justify-content: center;
     }
 
     .consult-button {
@@ -1009,8 +1074,6 @@ header p {
     transition: none !important;
   }
 }
-
-
   
   
   
