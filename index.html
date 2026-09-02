@@ -136,6 +136,7 @@
     .rkr-mobile-toggle[aria-expanded="true"] .rkr-burger-1 { transform: translateY(6px) rotate(45deg); }
     .rkr-mobile-toggle[aria-expanded="true"] .rkr-burger-2 { opacity: 0; }
     .rkr-mobile-toggle[aria-expanded="true"] .rkr-burger-3 { transform: translateY(-6px) rotate(-45deg); }
+    .rkr-mobile-toggle svg { stroke: var(--gold); }
     .rkr-mobile-menu { animation: rkr-menu-in 220ms var(--motion-luxury-ease) both; }
     .rkr-mobile-menu a:hover, .rkr-mobile-menu a:focus-visible { color: var(--gold) !important; }
     @keyframes rkr-menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
@@ -225,6 +226,8 @@
       /* Pillars: same 5-across desktop layout, scaled down */
       [data-rkr-grid="wrap5"] { gap: 0 !important; }
       .rkr-pillar { padding: 0 8px 20px !important; }
+      [data-rkr-grid="wrap5"] { align-items: start !important; }
+      [data-rkr-grid="wrap5"] .rkr-pillar { align-self: start !important; min-height: 160px !important; }
       .rkr-pillar > div:first-child { font-size: 19px !important; margin-bottom: 4px !important; }
       .rkr-pillar h4 { font-size: 13.5px !important; margin: 0 0 5px !important; }
       .rkr-pillar p { font-size: 10.5px !important; line-height: 1.35 !important; margin-bottom: 14px !important; min-height: 40px !important; }
@@ -259,6 +262,7 @@
       [data-rkr-hero-row] [data-rkr-text] > div[style*="justify-content:flex-end"], [data-rkr-hero-row] [data-rkr-text] > div[style*="align-items:flex-end"] { justify-content: center; }
       .rkr-coo-col { padding: 32px 22px !important; }
       section[data-screen-label="Mid CTA"] { display: none !important; }
+      section[data-screen-label="Instagram"] { display: none !important; }
       section[data-screen-label="Instagram"] > div:first-child { flex-direction: column !important; align-items: stretch !important; }
       section[data-screen-label="Instagram"] a.rkr-cta-btn2 { justify-content: center; }
       .rkr-ig-follow-btn { display: none !important; }
